@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Авторизация</h1>
+
+        <form action="">
+            <input type="text" id="name" required>
+            <input type="password" required>
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+
+    <div id="result"></div>
+
+    
+
+    <script>
+        
+
+        function getPrint(data)
+        {
+            const result = document.getElementById('result');
+
+            result.innerHTML = `
+                <table>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                ${data.map(d => `
+                    <tr>
+                        <th>${d.name}</th>
+                        <th>${d.name}</th>
+                    </tr>
+                `)}
+                </table>
+            `
+        }
+    </script>
+</body>
+</html>
